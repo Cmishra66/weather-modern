@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .shadow-sunny {
+    box-shadow: 0 0 30px #ffd700, 0 0 60px #fff9c4;
+  }
+  .animate-sunny {
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  .shadow-rainy {
+    box-shadow: 0 0 20px #90cdf4, 0 0 40px #63b3ed;
+  }
+  .animate-rainy {
+    animation: shimmer 4s linear infinite;
+  }
+
+  .shadow-cloudy {
+    box-shadow: 0 0 20px #cbd5e0, 0 0 30px #e2e8f0;
+  }
+  .animate-cloudy {
+    animation: fadeCloud 6s ease-in-out infinite;
+  }
+
+  .shadow-storm {
+    box-shadow: 0 0 20px #f87171, 0 0 40px #e11d48;
+  }
+  .animate-storm {
+    animation: flicker 1s infinite;
+  }
+
+  .shadow-default {
+    box-shadow: 0 0 20px #b8d8ff, 0 0 40px #ffffff;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 30px #ffd700, 0 0 60px #fff9c4; }
+    50% { box-shadow: 0 0 40px #ffeb3b, 0 0 80px #fffde7; }
+  }
+
+  @keyframes shimmer {
+    0% { box-shadow: 0 0 20px #90cdf4, 0 0 40px #63b3ed; }
+    50% { box-shadow: 0 0 30px #63b3ed, 0 0 50px #3182ce; }
+    100% { box-shadow: 0 0 20px #90cdf4, 0 0 40px #63b3ed; }
+  }
+
+  @keyframes fadeCloud {
+    0%, 100% { box-shadow: 0 0 20px #cbd5e0, 0 0 30px #e2e8f0; }
+    50% { box-shadow: 0 0 25px #a0aec0, 0 0 35px #cbd5e0; }
+  }
+
+  @keyframes flicker {
+    0%, 100% { box-shadow: 0 0 10px #f87171, 0 0 20px #e11d48; }
+    50% { box-shadow: 0 0 40px #f87171, 0 0 80px #e11d48; }
+  }
+}
